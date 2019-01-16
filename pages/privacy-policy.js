@@ -1,3 +1,4 @@
+import React from 'react'
 import Footer from '../src/components/Footer'
 import Layout from '../src/components/Layout'
 import Navbar from '../src/components/Navbar'

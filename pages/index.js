@@ -1,4 +1,4 @@
-
+import React from 'react'
 import Footer from '../src/components/Footer'
 import Layout from '../src/components/Layout'
 import Navbar from '../src/components/Navbar'
@@ -22,7 +22,7 @@ export default () => (
         </h2>
       </div>
     </header>
-    <section className='transition-area'/>
+    <section className='transition-area' />
     {/* <section className='email-subscription'>
       <label htmlFor='email'>Your email address</label>
       <input id='email' placeholder='Your email address'/>

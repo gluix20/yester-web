@@ -1,0 +1,9 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-react"],
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "no-underscore-dangle": "error",
+    "indent": ["error", 2]
+  }
+}

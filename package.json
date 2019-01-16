@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test:lint": "eslint . --fix",
+    "test": "npm run test:lint",
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export -o build"
+    "preexport": "npm t && next build",
+    "export": "next export -o build"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +22,19 @@
     "next": "^7.0.2",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-standard": "^4.0.0"
   }
 }
