@@ -1,0 +1,285 @@
+@mixin mediumSizeDevices {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin largeSizeDevices {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin extraLargeSizeDevices {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  background-color: #f6f7f9;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include largeSizeDevices {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@include extraLargeSizeDevices {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+
+.navbar {
+  padding: 20px;
+
+  &--bright#{&} {
+    background: #4241b3;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.navbar,
+.header {
+  color: #ffffff;
+  background-color: #1c1b53;
+}
+
+.header {
+  overflow: hidden;
+  padding: 28px 0 230px;
+  background-image: url('/static/background.png');
+  background-size: 140% auto;
+  background-position: center 90px;
+  background-repeat: no-repeat;
+
+  .container {
+    display: block;
+    text-align: center;
+  }
+}
+
+@include mediumSizeDevices {
+  .header {
+    padding-top: 70px;
+    background-position: center -320px;
+  }
+}
+
+@include largeSizeDevices {
+  .header {
+    padding-bottom: 400px;
+    background-size: 100% auto;
+    background-position: center -200px;
+  }
+}
+
+@include extraLargeSizeDevices {
+  .header {
+    background-position: center -600px;
+  }
+}
+
+.baloon-scene {
+  width: 124%;
+  height: auto;
+  margin-left: -12%;
+}
+
+@include largeSizeDevices {
+  .baloon-scene {
+    width: 100%;
+    margin-top: -80px;
+    margin-left: 0;
+  }
+}
+
+.transition-area {
+  background-image: url('/static/white-background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 200px;
+  margin-top: -200px;
+  margin-bottom: -100px;
+}
+
+@include largeSizeDevices {
+  .transition-area {
+    height: 220px;
+    margin-top: -220px;
+  }
+}
+@include extraLargeSizeDevices {
+  .transition-area {
+    height: 300px;
+    margin-top: -300px;
+  }
+}
+
+h1 {
+  margin: 0 16px;
+  font-size: 25px;
+}
+
+
+@include largeSizeDevices {
+  h1 {
+    font-size: 50px;
+    margin: 0 10%;
+  }
+}
+
+@include extraLargeSizeDevices {
+  h1 {
+    margin: 0 15%;
+  }
+}
+
+.icon-link {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+main {
+  padding: 0 16px;
+  padding-top: 20px;
+
+  .container {
+    display: block;
+  }
+}
+
+h3 {
+  color: #4241b3;
+  font-size: 20px;
+}
+
+
+@include largeSizeDevices {
+  main {
+    h3 {
+      font-size: 28px;
+    }
+  }
+}
+
+h2 {
+  font-weight: 400;
+  margin: 10px 16px;
+  font-size: 18px;
+}
+
+@include largeSizeDevices {
+  h2 {
+    font-size: 23px;
+  }
+}
+
+.email-subscription {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.yester-app {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 30px;
+  // to remove an extra space
+  font-size: 0;
+  img {
+    margin-bottom: -160px;
+  }
+}
+
+@include mediumSizeDevices {
+  main {
+    .container {
+      display: flex;
+    }
+  }
+
+  .description {
+    flex: 2;
+  }
+  .yester-app {
+    flex: 1;
+
+    img {
+      margin-bottom: -100px;
+    }
+  }
+}
+
+.footer {
+  padding: 24px;
+  background: #4241b3;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+
+  .email,
+  .terms-and-conditions {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .terms-and-conditions {
+    margin-top: 14px;
+  }
+
+  p {
+    margin-top: 40px;
+  }
+}
+
+@include largeSizeDevices {
+  .email,
+  .terms-and-conditions {
+    display: inline;
+  }
+
+  .email {
+    float: left;
+  }
+
+  .terms-and-conditions {
+    float: right;
+  }
+
+  .footer {
+    .terms-and-conditions,
+    p {
+      margin: 0;
+    }
+  }
+}
