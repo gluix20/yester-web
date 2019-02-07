@@ -13,7 +13,7 @@ export default () => (
         </h1>
         <img className='baloon-scene' src='/static/baloon-scene@2x.png' aria-hidden='true' />
         <h2>
-          What if you could easily wirte your memoirs?
+          What if you could easily write your memoirs?
         </h2>
         <h2>
           <strong>
