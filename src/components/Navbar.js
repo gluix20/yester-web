@@ -1,17 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-export default ({ bright }) => {
+const Navbar = ({ bright }) => {
   const navbarClassName = classNames({
     navbar: true,
-    'navbar--bright': bright
-  });
+    'navbar--bright': bright,
+  })
 
   return (
     <nav className={navbarClassName}>
       <div className='container'>
         <a href='/'>
-          <img className='logo' src='/static/yester.svg' alt='yester app'/>
+          <img className='logo' src='/static/yester.svg' alt='yester app' />
         </a>
         <div className='icons'>
           <a className='icon-link' href='https://www.facebook.com/yesterapp'>
@@ -25,3 +26,13 @@ export default ({ bright }) => {
     </nav>
   )
 }
+
+Navbar.propTypes = {
+  bright: PropTypes.bool,
+}
+
+Navbar.defaultProps = {
+  bright: false,
+}
+
+export default Navbar
