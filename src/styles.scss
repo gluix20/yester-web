@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 16px;
   background-color: #f6f7f9;
 }
@@ -38,7 +38,6 @@ body {
     max-width: 1140px;
   }
 }
-
 
 .navbar {
   padding: 20px;
@@ -63,7 +62,7 @@ body {
 .header {
   overflow: hidden;
   padding: 28px 0 230px;
-  background-image: url('/static/background.png');
+  background-image: url("/static/background.png");
   background-size: 140% auto;
   background-position: center 90px;
   background-repeat: no-repeat;
@@ -110,7 +109,7 @@ body {
 }
 
 .transition-area {
-  background-image: url('/static/white-background.svg');
+  background-image: url("/static/white-background.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -136,7 +135,6 @@ h1 {
   margin: 0 16px;
   font-size: 25px;
 }
-
 
 @include largeSizeDevices {
   h1 {
@@ -176,7 +174,6 @@ h3 {
   color: #4241b3;
   font-size: 20px;
 }
-
 
 @include largeSizeDevices {
   main {
@@ -242,7 +239,7 @@ h2 {
   font-size: 18px;
 
   .email,
-  .terms-and-conditions {
+  .privacy-policy {
     color: inherit;
     display: block;
     text-decoration: none;
@@ -253,7 +250,7 @@ h2 {
     }
   }
 
-  .terms-and-conditions {
+  .privacy-policy {
     margin-top: 14px;
   }
 
@@ -264,7 +261,7 @@ h2 {
 
 @include largeSizeDevices {
   .email,
-  .terms-and-conditions {
+  .privacy-policy {
     display: inline;
   }
 
@@ -272,14 +269,15 @@ h2 {
     float: left;
   }
 
-  .terms-and-conditions {
+  .privacy-policy {
     float: right;
   }
 
   .footer {
-    .terms-and-conditions,
+    .privacy-policy,
     p {
       margin: 0;
+      margin-left: 10px;
     }
   }
 }
