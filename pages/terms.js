@@ -4,7 +4,7 @@ import Layout from '../src/components/Layout'
 import Navbar from '../src/components/Navbar'
 
 export default () => (
-  <Layout title='Yester - Privacy Policy'>
+  <Layout title='Yester - Terms and Conditions'>
     <Navbar bright />
     <div className='container'>
       <p>Version 1.05</p>
